@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
+    transition: .3s all linear;
 }
 
 header {
@@ -38,8 +39,8 @@ h1 {
     max-width: 900px;
     margin: auto;
     display: flex;
-    padding-top: 20px;
     gap: 2rem;
+    padding: 20px 10px 0 10px;
 }
 
 .form_container {
@@ -103,4 +104,58 @@ label {
     margin-left: .4rem;
     color: red;
     font-weight: 100;
+}
+
+@media (max-width: 900px) {
+    header {
+        padding: 20px;
+    }
+
+    .main {
+        flex-direction: column;
+        width: 70%;
+        margin: auto;
+
+    }
+
+    .form_container input, textarea {
+        width: 100%;
+    }
+
+    .btn-container {
+        text-align: center;
+    }
+
+    .btn {
+        width: 60%;
+        padding: .7rem 1rem;
+    }
+}
+
+@media (max-width: 551px) {
+    header h1 {
+        font-size: 26px;
+    }
+
+    .main {
+        width: 90%;
+    }
+}
+
+@media (max-width:425px) {
+    header h1 {
+        font-size: 23px;
+    }
+
+    header {
+        padding: 15px;
+    }
+
+    .main {
+        width: 94%;
+    }
+
+    .btn {
+        width: 100%;
+    }
 }
